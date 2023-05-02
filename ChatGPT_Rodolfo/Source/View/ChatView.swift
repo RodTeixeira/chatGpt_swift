@@ -8,9 +8,15 @@
 import UIKit
 import AVFoundation
 
+
+protocol chatViewDelegate: AnyObject {
+    func sendMsg(text: String)
+}
+
 class ChatView: UIView {
     
     private var player: AVAudioPlayer?
+    private weak var delegate: chatViewDelegate?
     
     private lazy var messageInputView: UIView = {
         let view = UIView()
@@ -73,15 +79,43 @@ class ChatView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc
-    private func tapButton() {
-        
-    }
-    
     public func configTableView(delegate: UITableViewDelegate, dataSorce: UITableViewDataSource) {
         tableView.delegate = delegate
         tableView.dataSource = dataSorce
     }
+    
+    func delegate(delegate: chatViewDelegate?) {
+        self.delegate = delegate
+    }
+    
+    //MARK: Private metodos
+    @objc
+    private func tapButton() {
+        delegate?.sendMsg(text: textField.text ?? .empty)
+        sendButton.touchAnimation()
+        playSound()
+        pushMsg()
+    }
+    
+    private func pushMsg() {
+        textField.text = .empty
+        sendButton.isEnabled = false
+        sendButton.transform = .init(scaleX: 0.8, y: 0.8)
+    }
+    
+    private func playSound() {
+        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            guard let player = self.player else { return }
+            player.play()
+        } catch let error {
+            debugPrint("erro \(error.localizedDescription)")
+        }
+    }
+    
     
 }
 

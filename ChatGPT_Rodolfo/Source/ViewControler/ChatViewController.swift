@@ -5,12 +5,6 @@
 //
 
 import UIKit
-import OpenAISwift
-
-enum OpenAIError: Error {
-    case missingChoiseText
-    case apiError(Error)
-}
 
 class ChatViewController: UIViewController {
     
@@ -59,5 +53,14 @@ extension ChatViewController:  viewCodeContract {
         self.addLogoToNavigationBarItem(image: logo)
         setup()
         hideKeyboardWhenTappedAround()
+        screen?.delegate(delegate: self)
     }
+}
+
+extension ChatViewController: chatViewDelegate {
+    
+    func sendMsg(text: String) {
+        debugPrint(text)
+    }
+    
 }

@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum OpenAIError: Error {
+    case missingChoiseText
+    case apiError(Error)
+}
+
 class ChatService: ServiceManager {
     
     func sendOpenAIRequest(text: String, completion: @escaping (Result<String, OpenAIError>) -> Void) {
