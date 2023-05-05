@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2141FB72A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2141FB62A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift */; };
 		E21C8F5229EF8EC900AEF649 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C8F5129EF8EC900AEF649 /* ServiceManager.swift */; };
 		E21C8F5429EF903100AEF649 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C8F5329EF903100AEF649 /* ChatService.swift */; };
 		E21C8F5629EF90A700AEF649 /* chatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C8F5529EF90A700AEF649 /* chatViewModel.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2141FB62A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageTableViewCell.swift; sourceTree = "<group>"; };
 		E21C8F5129EF8EC900AEF649 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		E21C8F5329EF903100AEF649 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		E21C8F5529EF90A700AEF649 /* chatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewModel.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				E21C8F5829EF980300AEF649 /* ChatView.swift */,
+				E2141FB62A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C9AD6029EE45B300F1ADD8 /* ChatViewController.swift in Sources */,
+				E2141FB72A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift in Sources */,
 				E24190BA29F4532E001E7BE8 /* UIViewController+Extension.swift in Sources */,
 				E24190B229F45311001E7BE8 /* String+Extension.swift in Sources */,
 				E21C8F5629EF90A700AEF649 /* chatViewModel.swift in Sources */,
