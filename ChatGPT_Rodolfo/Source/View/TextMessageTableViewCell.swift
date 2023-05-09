@@ -38,6 +38,10 @@ class TextMessageTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func setupCell(text: String) {
+        mesageLabel.text = text
+    }
 }
 
 extension TextMessageTableViewCell: viewCodeContract {
@@ -48,7 +52,14 @@ extension TextMessageTableViewCell: viewCodeContract {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-        
+            myMessageView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            myMessageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            myMessageView.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
+            
+            mesageLabel.leadingAnchor.constraint(equalTo: myMessageView.leadingAnchor, constant: 15),
+            mesageLabel.topAnchor.constraint(equalTo: myMessageView.topAnchor, constant: 15),
+            mesageLabel.bottomAnchor.constraint(equalTo: myMessageView.bottomAnchor, constant: -15),
+            mesageLabel.trailingAnchor.constraint(equalTo: myMessageView.trailingAnchor, constant: -15)
         ])
     }
     
@@ -56,6 +67,8 @@ extension TextMessageTableViewCell: viewCodeContract {
         selectionStyle = .none
         backgroundColor = .backGround
     }
+    
+    
     
     
 }
