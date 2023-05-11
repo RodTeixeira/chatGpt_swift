@@ -65,6 +65,7 @@ class ChatView: UIView {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(TextMessageTableViewCell.self, forCellReuseIdentifier: TextMessageTableViewCell.indentifier)
+        table.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.indentifier)
         table.separatorColor = .none
         table.backgroundColor = .clear
         table.transform  = CGAffineTransform(scaleX: 1, y: -1)
@@ -194,7 +195,7 @@ extension ChatView: viewCodeContract {
     
     func setupConfigurations() {
         backgroundColor = .backGround
-
+        
     }
     
 }

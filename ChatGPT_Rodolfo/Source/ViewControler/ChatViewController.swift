@@ -54,6 +54,7 @@ extension ChatViewController:  viewCodeContract {
         setup()
         hideKeyboardWhenTappedAround()
         screen?.delegate(delegate: self)
+        screen?.configTableView(delegate: self, dataSorce: self)
     }
 }
 
@@ -64,3 +65,19 @@ extension ChatViewController: chatViewDelegate {
     }
     
 }
+
+extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 0
+    }
+    
+}
+
