@@ -68,7 +68,4 @@ extension TextMessageTableViewCell: viewCodeContract {
         backgroundColor = .backGround
     }
     
-    
-    
-    
 }
