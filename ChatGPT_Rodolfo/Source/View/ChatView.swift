@@ -117,7 +117,6 @@ class ChatView: UIView {
         }
     }
     
-    
 }
 
 extension ChatView: UITextFieldDelegate {
