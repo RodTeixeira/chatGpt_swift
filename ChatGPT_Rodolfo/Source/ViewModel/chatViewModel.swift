@@ -16,7 +16,7 @@ protocol chatViewModelProtocol: AnyObject {
 class chatViewModel {
     
     private weak var delegate: chatViewModelProtocol?
-    
+    private var messageList: [Message] = []
     public func delegate(delegate: chatViewModelProtocol?) {
         self.delegate = delegate
     }
@@ -33,6 +33,18 @@ class chatViewModel {
             }
         }
         
+    }
+    
+    var numberOfRows: Int {
+        messageList.count
+    }
+    
+    func loadCurrentMessage(indexPath: IndexPath) -> Message {
+        messageList[indexPath.row]
+    }
+    
+    func heightForRow(IndexPath: IndexPath) -> CGFloat{
+        return 200
     }
 
 }

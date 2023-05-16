@@ -39,8 +39,8 @@ class TextMessageTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupCell(text: String) {
-        mesageLabel.text = text
+    public func setupCell(text: Message) {
+        mesageLabel.text = text.message
     }
 }
 

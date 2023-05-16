@@ -20,6 +20,7 @@
 		E24190BA29F4532E001E7BE8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24190B929F4532E001E7BE8 /* UIViewController+Extension.swift */; };
 		E24190BD29F45342001E7BE8 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = E24190BC29F45342001E7BE8 /* send.wav */; };
 		E24190BF29F45395001E7BE8 /* ViewCodeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24190BE29F45395001E7BE8 /* ViewCodeContract.swift */; };
+		E25947C22A13BD5F007FE59A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25947C12A13BD5F007FE59A /* Message.swift */; };
 		E2C9AD5C29EE45B300F1ADD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD5B29EE45B300F1ADD8 /* AppDelegate.swift */; };
 		E2C9AD5E29EE45B300F1ADD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD5D29EE45B300F1ADD8 /* SceneDelegate.swift */; };
 		E2C9AD6029EE45B300F1ADD8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD5F29EE45B300F1ADD8 /* ChatViewController.swift */; };
@@ -64,6 +65,7 @@
 		E24190B929F4532E001E7BE8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E24190BC29F45342001E7BE8 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
 		E24190BE29F45395001E7BE8 /* ViewCodeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeContract.swift; sourceTree = "<group>"; };
+		E25947C12A13BD5F007FE59A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E2C9AD5829EE45B300F1ADD8 /* ChatGPT_Rodolfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT_Rodolfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C9AD5B29EE45B300F1ADD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C9AD5D29EE45B300F1ADD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		E21C8F4D29EF8E0B00AEF649 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E25947C02A13BD42007FE59A /* Model */,
 				E21C8F5729EF97B100AEF649 /* View */,
 				E21C8F5029EF8EAD00AEF649 /* Service */,
 				E21C8F4F29EF8E9900AEF649 /* ViewModel */,
@@ -191,6 +194,14 @@
 				E24190BC29F45342001E7BE8 /* send.wav */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		E25947C02A13BD42007FE59A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E25947C12A13BD5F007FE59A /* Message.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E2C9AD4F29EE45B200F1ADD8 = {
@@ -392,6 +403,7 @@
 				E2C9AD6029EE45B300F1ADD8 /* ChatViewController.swift in Sources */,
 				E2141FB72A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift in Sources */,
 				E23F55BE2A09E399000A1A78 /* IncomingTextMessageTableViewCell.swift in Sources */,
+				E25947C22A13BD5F007FE59A /* Message.swift in Sources */,
 				E24190BA29F4532E001E7BE8 /* UIViewController+Extension.swift in Sources */,
 				E24190B229F45311001E7BE8 /* String+Extension.swift in Sources */,
 				E21C8F5629EF90A700AEF649 /* chatViewModel.swift in Sources */,
