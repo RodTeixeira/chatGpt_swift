@@ -8,7 +8,7 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
-    private var VM = chatViewModel()
+    private var viewModel = chatViewModel()
     var screen: ChatView?
     
     override func loadView() {
@@ -19,13 +19,13 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-//        VM.fetchService(text: "que dia é hoje")
+        //        VM.fetchService(text: "que dia é hoje")
     }
     
     private func setup() {
-        VM.delegate(delegate: self)
+        viewModel.delegate(delegate: self)
     }
-
+    
 }
 
 extension ChatViewController: chatViewModelProtocol {
@@ -61,22 +61,39 @@ extension ChatViewController:  viewCodeContract {
 extension ChatViewController: chatViewDelegate {
     
     func sendMsg(text: String) {
-        debugPrint(text)
+        viewModel.fetchService(text: text)
     }
     
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let message  = viewModel.loadCurrentMessage(indexPath: indexPath)
+        
+        switch message.typeMessage {
+        case .user:
+            let indentifier = TextMessageTableViewCell.indentifier
+            let cell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as? TextMessageTableViewCell
+            cell?.setupCell(text: message)
+            return cell ?? UITableViewCell()
+            
+        case .chatGPT:
+            let indentifier = IncomingTextMessageTableViewCell.indentifier
+            let cell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as? IncomingTextMessageTableViewCell
+            cell?.setupCell(text: message)
+            return cell ?? UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
+        return viewModel.heightForRow(IndexPath: indexPath)
     }
     
 }
