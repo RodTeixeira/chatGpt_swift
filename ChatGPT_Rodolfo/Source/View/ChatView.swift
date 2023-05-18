@@ -43,7 +43,7 @@ class ChatView: UIView {
         but.layer.shadowOffset = CGSize(width: 0, height: 5)
         but.layer.shadowOpacity = 0.3
         but.isEnabled = false
-//        but.transform = .init(scaleX: 0.8, y: 0.8)
+        but.transform = .init(scaleX: 0.8, y: 0.8)
         but.setImage(UIImage(named: "send"), for: .normal)
         but.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         return but
@@ -116,6 +116,10 @@ class ChatView: UIView {
         } catch let error {
             debugPrint("erro \(error.localizedDescription)")
         }
+    }
+    
+    func reloadTableview() {
+        tableView.reloadData()
     }
     
 }

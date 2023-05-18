@@ -66,6 +66,7 @@ extension TextMessageTableViewCell: viewCodeContract {
     func setupConfigurations() {
         selectionStyle = .none
         backgroundColor = .backGround
+        transform = CGAffineTransform(scaleX: 1, y: -1)
     }
     
 }

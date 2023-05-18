@@ -35,6 +35,12 @@ class chatViewModel {
         
     }
     
+    
+    func addMessage(message: String, type: TypeMessage) {
+        let msg = message.trimmingCharacters(in: .whitespacesAndNewlines)
+        messageList.insert(Message(message: msg, date: Date(), typeMessage: type), at: .zero)
+    }
+    
     var numberOfRows: Int {
         messageList.count
     }

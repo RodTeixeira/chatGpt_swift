@@ -61,7 +61,8 @@ extension ChatViewController:  viewCodeContract {
 extension ChatViewController: chatViewDelegate {
     
     func sendMsg(text: String) {
-        viewModel.fetchService(text: text)
+        viewModel.addMessage(message: text, type: .user)
+        screen?.reloadTableview()
     }
     
 }
