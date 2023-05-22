@@ -52,8 +52,8 @@ extension IncomingTextMessageTableViewCell: viewCodeContract {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            contactMessageView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            contactMessageView.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            contactMessageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            contactMessageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             contactMessageView.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
             
             mesageLabel.leadingAnchor.constraint(equalTo: contactMessageView.leadingAnchor, constant: 15),

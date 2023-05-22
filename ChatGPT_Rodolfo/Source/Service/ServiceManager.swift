@@ -11,6 +11,6 @@ import OpenAISwift
 class ServiceManager {
     
     var openAIModelType: OpenAIModelType = .gpt3(.davinci)
-    var token: OpenAISwift = OpenAISwift(authToken: API.authToken)
+    var token: OpenAISwift = OpenAISwift(authToken: API.teste)
     
 }

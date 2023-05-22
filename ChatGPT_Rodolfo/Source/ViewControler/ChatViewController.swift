@@ -19,38 +19,53 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        //        VM.fetchService(text: "que dia é hoje")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let logo = UIImage(named: "logo") else { return }
+        self.addLogoToNavigationBarItem(image: logo)
     }
     
     private func setup() {
         viewModel.delegate(delegate: self)
     }
     
+    private func vibrate() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare()
+        generator.impactOccurred()
+    }
+    
+    private func reloadTableView() {
+        vibrate()
+        screen?.reloadTableview()
+    }
+    
+    
 }
 
 extension ChatViewController: chatViewModelProtocol {
-    func sucess(response: String) {
-        print(response)
+    func sucess() {
+        reloadTableView()
     }
     
-    func error(msgError: String) {
-        print(msgError)
+    func error() {
+        reloadTableView()
     }
     
 }
 
 extension ChatViewController:  viewCodeContract {
     func setupHierarchy() {
-        
+        //empty
     }
     
     func setupConstraints() {
-        
+        //empty
     }
     
     func setupConfigurations() {
-        guard let logo = UIImage(named: "logo") else { return }
-        self.addLogoToNavigationBarItem(image: logo)
         setup()
         hideKeyboardWhenTappedAround()
         screen?.delegate(delegate: self)
@@ -62,7 +77,8 @@ extension ChatViewController: chatViewDelegate {
     
     func sendMsg(text: String) {
         viewModel.addMessage(message: text, type: .user)
-        screen?.reloadTableview()
+        reloadTableView()
+        viewModel.fetchService(text: text)
     }
     
 }
