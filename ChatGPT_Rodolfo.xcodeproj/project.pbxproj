@@ -20,6 +20,7 @@
 		E24190BA29F4532E001E7BE8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24190B929F4532E001E7BE8 /* UIViewController+Extension.swift */; };
 		E24190BD29F45342001E7BE8 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = E24190BC29F45342001E7BE8 /* send.wav */; };
 		E24190BF29F45395001E7BE8 /* ViewCodeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24190BE29F45395001E7BE8 /* ViewCodeContract.swift */; };
+		E25903112A1BCF4F00AE091B /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E25903102A1BCF4F00AE091B /* OpenAISwift */; };
 		E25947C22A13BD5F007FE59A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25947C12A13BD5F007FE59A /* Message.swift */; };
 		E2C9AD5C29EE45B300F1ADD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD5B29EE45B300F1ADD8 /* AppDelegate.swift */; };
 		E2C9AD5E29EE45B300F1ADD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD5D29EE45B300F1ADD8 /* SceneDelegate.swift */; };
@@ -31,7 +32,6 @@
 		E2C9AD7D29EE45B300F1ADD8 /* ChatGPT_RodolfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD7C29EE45B300F1ADD8 /* ChatGPT_RodolfoUITests.swift */; };
 		E2C9AD7F29EE45B300F1ADD8 /* ChatGPT_RodolfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD7E29EE45B300F1ADD8 /* ChatGPT_RodolfoUITestsLaunchTests.swift */; };
 		E2C9AD8C29EE475800F1ADD8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C9AD8B29EE475800F1ADD8 /* API.swift */; };
-		E2C9AD9E29EE49DB00F1ADD8 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2C9AD9D29EE49DB00F1ADD8 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2C9AD9E29EE49DB00F1ADD8 /* OpenAISwift in Frameworks */,
+				E25903112A1BCF4F00AE091B /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +279,7 @@
 			);
 			name = ChatGPT_Rodolfo;
 			packageProductDependencies = (
-				E2C9AD9D29EE49DB00F1ADD8 /* OpenAISwift */,
+				E25903102A1BCF4F00AE091B /* OpenAISwift */,
 			);
 			productName = ChatGPT_Rodolfo;
 			productReference = E2C9AD5829EE45B300F1ADD8 /* ChatGPT_Rodolfo.app */;
@@ -354,7 +354,7 @@
 			);
 			mainGroup = E2C9AD4F29EE45B200F1ADD8;
 			packageReferences = (
-				E2C9AD9C29EE49DB00F1ADD8 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				E259030F2A1BCF4F00AE091B /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 			);
 			productRefGroup = E2C9AD5929EE45B300F1ADD8 /* Products */;
 			projectDirPath = "";
@@ -591,9 +591,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DZN5S633Y2;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatGPT_Rodolfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -608,6 +608,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rodofikis.ChatGPT-Rodolfo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -619,9 +620,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DZN5S633Y2;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatGPT_Rodolfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -636,6 +637,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rodofikis.ChatGPT-Rodolfo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -760,7 +762,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E2C9AD9C29EE49DB00F1ADD8 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+		E259030F2A1BCF4F00AE091B /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
 			requirement = {
@@ -771,9 +773,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E2C9AD9D29EE49DB00F1ADD8 /* OpenAISwift */ = {
+		E25903102A1BCF4F00AE091B /* OpenAISwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E2C9AD9C29EE49DB00F1ADD8 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			package = E259030F2A1BCF4F00AE091B /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
