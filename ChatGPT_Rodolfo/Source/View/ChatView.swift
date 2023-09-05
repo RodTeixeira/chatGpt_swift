@@ -64,8 +64,8 @@ class ChatView: UIView {
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.register(TextMessageTableViewCell.self, forCellReuseIdentifier: TextMessageTableViewCell.indentifier)
-        table.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.indentifier)
+        table.register(cellType: TextMessageTableViewCell.self)
+        table.register(cellType: IncomingTextMessageTableViewCell.self)
         table.separatorColor = .none
         table.backgroundColor = .clear
         table.transform  = CGAffineTransform(scaleX: 1, y: -1)

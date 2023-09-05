@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2072E3A2AA6C5E7007B3C47 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2072E392AA6C5E7007B3C47 /* UITableView+Extension.swift */; };
 		E2141FB72A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2141FB62A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift */; };
 		E21C8F5229EF8EC900AEF649 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C8F5129EF8EC900AEF649 /* ServiceManager.swift */; };
 		E21C8F5429EF903100AEF649 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C8F5329EF903100AEF649 /* ChatService.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2072E392AA6C5E7007B3C47 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		E2141FB62A04AC6D00D0F1B7 /* TextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageTableViewCell.swift; sourceTree = "<group>"; };
 		E21C8F5129EF8EC900AEF649 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		E21C8F5329EF903100AEF649 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				E24190B529F45326001E7BE8 /* UIColor+Extension.swift */,
 				E24190B329F45319001E7BE8 /* UIButton+Extension.swift */,
 				E24190B129F45311001E7BE8 /* String+Extension.swift */,
+				E2072E392AA6C5E7007B3C47 /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				E24190B429F45319001E7BE8 /* UIButton+Extension.swift in Sources */,
 				E2C9AD5C29EE45B300F1ADD8 /* AppDelegate.swift in Sources */,
 				E24190BF29F45395001E7BE8 /* ViewCodeContract.swift in Sources */,
+				E2072E3A2AA6C5E7007B3C47 /* UITableView+Extension.swift in Sources */,
 				E24190B829F45329001E7BE8 /* UIFont+Extension.swift in Sources */,
 				E2C9AD8C29EE475800F1ADD8 /* API.swift in Sources */,
 				E21C8F5929EF980300AEF649 /* ChatView.swift in Sources */,

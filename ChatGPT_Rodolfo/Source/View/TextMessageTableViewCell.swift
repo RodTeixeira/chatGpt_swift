@@ -7,9 +7,7 @@
 
 import UIKit
 
-class TextMessageTableViewCell: UITableViewCell {
-    
-    static let indentifier: String = String(describing: TextMessageTableViewCell.self)
+class TextMessageTableViewCell: UITableViewCell, Identifiable {
     
     private lazy var myMessageView: UIView = {
         let view = UIView()

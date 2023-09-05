@@ -96,16 +96,14 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch message.typeMessage {
         case .user:
-            let indentifier = TextMessageTableViewCell.indentifier
-            let cell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as? TextMessageTableViewCell
-            cell?.setupCell(text: message)
-            return cell ?? UITableViewCell()
+            let cell = tableView.dequeueReusableCell(cellType: TextMessageTableViewCell.self, for: indexPath)
+            cell.setupCell(text: message)
+            return cell
             
         case .chatGPT:
-            let indentifier = IncomingTextMessageTableViewCell.indentifier
-            let cell = tableView.dequeueReusableCell(withIdentifier: indentifier, for: indexPath) as? IncomingTextMessageTableViewCell
-            cell?.setupCell(text: message)
-            return cell ?? UITableViewCell()
+            let cell = tableView.dequeueReusableCell(cellType: IncomingTextMessageTableViewCell.self, for: indexPath)
+            cell.setupCell(text: message)
+            return cell
         }
     }
     

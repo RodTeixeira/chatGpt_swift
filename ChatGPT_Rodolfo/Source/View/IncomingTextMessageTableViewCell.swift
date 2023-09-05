@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IncomingTextMessageTableViewCell: UITableViewCell {
+class IncomingTextMessageTableViewCell: UITableViewCell, Identifiable {
 
     static let indentifier: String = String(describing: IncomingTextMessageTableViewCell.self)
     
